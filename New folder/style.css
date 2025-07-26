@@ -1,0 +1,104 @@
+
+body {
+  direction: rtl;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  color: #333;
+}
+header {
+  background: #005;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+nav li {
+  margin: 0.5rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #007;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+nav a:hover {
+  background: #009;
+}
+main {
+  padding: 2rem;
+  background: white;
+  margin: 1rem auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+footer {
+  text-align: center;
+  padding: 0.0001rem;
+  background: #005;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.card img {
+  width: 100%;            /* الصورة تملى عرض الكرت */
+  height: 350px;          /* ارتفاع ثابت */
+  object-fit: cover;      /* تقص الصورة بشكل أنيق */
+  border-bottom: 1px solid #ddd;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #007;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    z-index: 1000;
+  }
+  
+  #navbar.active ul {
+    display: flex;
+  }
+  
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+  #navbar.active ul {
+    display: flex;
+  }
+}  
+
